@@ -7,6 +7,8 @@ export default class Weather {
         if (localStorage.getItem('weather') && Date.now() - localStorage.getItem('weather_timestamp') < 600000) {
             // get data from localstorage
             const weatherData = JSON.parse(localStorage.getItem('weather'));
+            const rickmorty = new RickMorty(weatherData.hourly.temperature_2m[0]);
+            this.displayWeather(weatherData);
         } else {
             this.getLocation();
         };
