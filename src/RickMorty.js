@@ -43,18 +43,5 @@ export default class RickMorty {
             document.querySelector('.character__name').textContent = character.name;
             document.querySelector('.character__image').src = character.image;
         }
-        characters.forEach(character => {
-            const characterName = character.name;
-    
-            const characterDiv = document.createElement('div');
-            characterDiv.classList.add('character');
-
-            const characterNameDiv = document.createElement('div');
-            characterNameDiv.classList.add('character__name');
-            characterNameDiv.textContent = characterName;
-
-            characterDiv.appendChild(characterNameDiv);
-            document.querySelector('.rickmorty').appendChild(characterDiv);
-        });
     };
 };
