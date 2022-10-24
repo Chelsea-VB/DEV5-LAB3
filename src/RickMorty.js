@@ -28,12 +28,12 @@ export default class RickMorty {
             document.querySelector('.character__name').textContent = character.name;
             document.querySelector('.character__image').src = character.image;
         } else if (this.temperature < 20) {
-            const character = characters[2];
+            const character = characters[4];
             console.log(character);
             document.querySelector('.character__name').textContent = character.name;
             document.querySelector('.character__image').src = character.image;
         } else if (this.temperature < 30) {
-            const character = characters[3];
+            const character = characters[2];
             console.log(character);
             document.querySelector('.character__name').textContent = character.name;
             document.querySelector('.character__image').src = character.image;
