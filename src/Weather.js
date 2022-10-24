@@ -1,3 +1,4 @@
+import RickMorty from "./RickMorty";
 export default class Weather {
     constructor(api_key) {
         this.apiKey = api_key;
@@ -38,6 +39,8 @@ export default class Weather {
                 localStorage.setItem('weather_timestamp', Date.now());
 
                 this.displayWeather(data);
+
+                const rickmorty = new RickMorty(data.hourly.temperature_2m[0]);
             });
     };
 
@@ -45,5 +48,7 @@ export default class Weather {
         const temp = data.hourly.temperature_2m[0];
         console.log(temp);
         document.querySelector('.weather__temp').textContent = temp;
+
+
     };
 };
